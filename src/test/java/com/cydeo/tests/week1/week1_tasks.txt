@@ -1,0 +1,21 @@
+ Topics:
+
+      **  Locators - findElement() - getText() - getAttribute() - getTitle()
+
+===========================================
+
+ **  TC001 As a user I should be able to see Login label is displayed
+
+  1- Open a chrome browser
+  2- Goto https://vytrack.com/
+  3- Verify Login is displayed
+
+____________________________________________
+
+  ** TC002 As a user I should be able to see the login page  
+
+ 1- Setup the "browser driver"
+ 2- Go to "https://vytrack.com"
+ 3- Click Login label
+ 4- Verify the title contains "Login"
+ 5- Verify the password is hidden
