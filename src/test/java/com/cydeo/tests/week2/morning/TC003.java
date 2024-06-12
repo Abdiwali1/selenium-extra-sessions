@@ -1,6 +1,6 @@
 package com.cydeo.tests.week2.morning;
 
-import com.cydeo.tests.utilities.*;
+import com.cydeo.utilities.*;
 import org.openqa.selenium.*;
 import org.testng.*;
 import org.testng.annotations.*;
