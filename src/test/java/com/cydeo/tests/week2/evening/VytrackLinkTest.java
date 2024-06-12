@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class VytrackLinkTest {
@@ -28,6 +30,16 @@ public class VytrackLinkTest {
          for (WebElement eachLink : allTopLinks) {
              Assert.assertTrue(eachLink.isDisplayed());
          }
+
+        List<String> expectedLinks = new ArrayList<String>(Arrays.asList("Home", "About us", "Our Approach", "Products and Services", "Contact", "LOGIN"));
+        List<String> actualLinks = new ArrayList<>();
+
+         for (WebElement eachLink : allTopLinks) {
+             actualLinks.add(eachLink.getText());
+         }
+
+         Assert.assertEquals(actualLinks,expectedLinks);
+
 
      }
 }
