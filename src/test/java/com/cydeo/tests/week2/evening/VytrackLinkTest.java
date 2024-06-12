@@ -27,10 +27,13 @@ public class VytrackLinkTest {
          //  are displayed
          List<WebElement> allTopLinks = driver.findElements(By.xpath("//ul[@id='top-menu']/li/a"));
 
+
          for (WebElement eachLink : allTopLinks) {
              Assert.assertTrue(eachLink.isDisplayed());
          }
 
+         // Verification with using isDisplayed() is not going to be checking each text correctly
+         // That is why we are using below way
         List<String> expectedLinks = new ArrayList<String>(Arrays.asList("Home", "About us", "Our Approach", "Products and Services", "Contact", "LOGIN"));
         List<String> actualLinks = new ArrayList<>();
 
