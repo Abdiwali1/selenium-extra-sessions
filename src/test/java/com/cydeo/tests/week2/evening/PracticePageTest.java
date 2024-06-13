@@ -62,7 +62,7 @@ public class PracticePageTest {
 
         //  5-select the favorite color as Red
         WebElement redBtn = driver.findElement(By.id("red"));
-        redBtn.click();
+       redBtn.click();
 
         //  6-verify the Red is selected
        Assert.assertTrue(redBtn.isSelected(),"Red button is not selected!");
