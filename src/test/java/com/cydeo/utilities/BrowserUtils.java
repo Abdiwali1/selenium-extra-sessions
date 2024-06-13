@@ -77,4 +77,9 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.titleContains(title));
     }
 
+
+     public static void clickLinks(WebDriver driver,String link){
+         driver.findElement(By.linkText(link)).click();
+     }
+
 }

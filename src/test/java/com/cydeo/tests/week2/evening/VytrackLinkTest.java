@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -14,11 +16,18 @@ import java.util.List;
 
 public class VytrackLinkTest {
 
+    WebDriver driver;
+
+    @BeforeMethod
+    public void setup(){
+        // 1-open a chrome browser
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
+
+    }
+
      @Test
      public void vytrack_link_test(){
-         // 1-open a chrome browser
-         WebDriver driver = WebDriverFactory.getDriver("chrome");
-         driver.manage().window().maximize();
 
          //  2-goto https://vytrack.com/
          driver.get("https://vytrack.com/");
@@ -43,6 +52,12 @@ public class VytrackLinkTest {
 
          Assert.assertEquals(actualLinks,expectedLinks);
 
+     }
+
+     @AfterMethod
+     public void teardown(){
+
+        driver.quit();
 
      }
 }
