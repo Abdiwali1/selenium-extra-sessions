@@ -4,6 +4,7 @@ import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -47,4 +48,30 @@ public class PracticePageTest {
         Assert.assertEquals(actualSelectedOption,expectedSelectedOption);
     }
 
+
+    @Test
+    public void radio_button_test(){
+        //  2-goto https://practice.cydeo.com/
+        driver.get("https://practice.cydeo.com/");
+
+        //  3-click Radio Buttons
+        BrowserUtils.clickLinks(driver,"Radio Buttons");
+
+        //  4-verify title contains Radio buttons
+        BrowserUtils.verifyTitleContains(driver,"Radio buttons");
+
+        //  5-select the favorite color as Red
+        WebElement redBtn = driver.findElement(By.id("red"));
+        redBtn.click();
+
+        //  6-verify the Red is selected
+       Assert.assertTrue(redBtn.isSelected(),"Red button is not selected!");
+
+        //  7-select the favorite sport as Football
+        WebElement footballBtn = driver.findElement(By.id("football"));
+        footballBtn.click();
+
+        //  8-verify the Football is selected
+       Assert.assertTrue(footballBtn.isSelected(),"Football button is not selected!");
+    }
 }
