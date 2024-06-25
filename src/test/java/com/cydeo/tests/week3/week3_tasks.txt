@@ -1,0 +1,28 @@
+Topics: Iframe, WindowHandle, WebTable, Driver, ConfigurationReader
+
+Task 1:  Iframe-window handles
+
+
+Test website: http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_target
+
+Test Scenario:
+
+Step 1- Go to the above URL.
+Step 2- Get the current window’s handle and write to the console window. It must be the first window handle.
+Step 3- Click on “Visit W3Schools.com!” link
+Step 4- Verify total window handle number is 2.
+Step 5- Switch to the second window.
+Step 6- Verify upper left side logo is displayed in second window.
+Step 7- Go back (Switch) to the first window.
+Step 8- Check the See Run Button Text. It must contain “Run >” text.
+
+
+------------------- 
+
+url = http://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html
+
+Task 2:  Web Table
+
+Step 1- Click on calendar
+Step 2- Get the text of all test data of tables
+Step 3- Click the specific date with creating dynamic method
