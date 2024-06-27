@@ -35,6 +35,7 @@ public class Iframe_WindowHandleTest {
            Driver.getDriver().switchTo().window(eachWindow);
        }
 
+
        //Step 6- Verify upper left side logo is displayed in second window.
        WebElement logo = Driver.getDriver().findElement(By.xpath("//a[@id='w3-logo']/i"));
        Assert.assertTrue(logo.isDisplayed());
